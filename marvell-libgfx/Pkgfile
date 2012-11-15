@@ -1,0 +1,25 @@
+# Description: Marvell Armada 510/Dove graphics libraries
+# URL: http://www.solid-run.com/mw/index.php/Main_Page
+# Packager: Ryan Mullen, rmmullen at gmail dot com
+# Maintainer: Ryan Mullen, rmmullen at gmail dot com
+# Depends on:
+
+name=marvell-libgfx
+version=0.3.4
+release=1
+source=(http://download.solid-run.com/pub/solidrun/cubox/packages/marvell-opengl/marvell-opengl-hardfp-debug.zip
+	http://download.solid-run.com/pub/solidrun/cubox/packages/marvell-opengl/marvell-opengl-hardfp-new-headers.zip)
+
+build() {
+    mkdir -p $PKG/usr/lib
+	mkdir $PKG/usr/include
+
+    cd $PKG/usr/lib
+	for lib in EGL GAL GLES_CL GLES_CM GLESv2SC GLESv2x OpenVG VIVANTE gcu; do
+		cp $SRC/gc3184-1-mgcc462hd-d/lib$lib.so lib$lib.so.1
+		ln -s lib$lib.so.1 lib$lib.so
+	done
+
+	cd $SRC/gc3184-gcc-4.6-armv7-hard_release/sdk/include
+    cp -r KHR HAL VG EGL GLES GLES2 $PKG/usr/include
+}	

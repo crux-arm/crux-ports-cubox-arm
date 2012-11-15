@@ -1,0 +1,65 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/EGL/
+-rwxr--r--	root/root	usr/include/EGL/egl.h
+-rwxr--r--	root/root	usr/include/EGL/eglext.h
+-rwxr--r--	root/root	usr/include/EGL/eglplatform.h
+-rwxr--r--	root/root	usr/include/EGL/eglrename.h
+-rwxr--r--	root/root	usr/include/EGL/eglunname.h
+-rwxr--r--	root/root	usr/include/EGL/nativefb.h
+drwxr-xr-x	root/root	usr/include/GLES/
+-rwxr--r--	root/root	usr/include/GLES/egl.h
+-rwxr--r--	root/root	usr/include/GLES/gl.h
+-rwxr--r--	root/root	usr/include/GLES/glext.h
+-rwxr--r--	root/root	usr/include/GLES/glext_mrvl.h
+-rwxr--r--	root/root	usr/include/GLES/glplatform.h
+-rwxr--r--	root/root	usr/include/GLES/glrename.h
+-rwxr--r--	root/root	usr/include/GLES/glunname.h
+drwxr-xr-x	root/root	usr/include/GLES2/
+-rwxr--r--	root/root	usr/include/GLES2/gl2.h
+-rwxr--r--	root/root	usr/include/GLES2/gl2_mrvl.h
+-rwxr--r--	root/root	usr/include/GLES2/gl2ext.h
+-rwxr--r--	root/root	usr/include/GLES2/gl2ext_mrvl.h
+-rwxr--r--	root/root	usr/include/GLES2/gl2platform.h
+-rwxr--r--	root/root	usr/include/GLES2/gl2rename.h
+-rwxr--r--	root/root	usr/include/GLES2/gl2unname.h
+drwxr-xr-x	root/root	usr/include/HAL/
+lrwxrwxrwx	root/root	usr/include/HAL/aqHal.h -> gc_hal.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_base.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_dump.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_engine.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_enum.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_options.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_profiler.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_raster.h
+-rwxr--r--	root/root	usr/include/HAL/gc_hal_types.h
+drwxr-xr-x	root/root	usr/include/KHR/
+-rwxr--r--	root/root	usr/include/KHR/khrplatform.h
+-rwxr--r--	root/root	usr/include/KHR/khrvivante.h
+drwxr-xr-x	root/root	usr/include/VG/
+-rwxr--r--	root/root	usr/include/VG/openvg.h
+-rwxr--r--	root/root	usr/include/VG/vgext.h
+-rwxr--r--	root/root	usr/include/VG/vgplatform.h
+-rwxr--r--	root/root	usr/include/VG/vgrename.h
+-rwxr--r--	root/root	usr/include/VG/vgu.h
+-rwxr--r--	root/root	usr/include/VG/vgunname.h
+drwxr-xr-x	root/root	usr/lib/
+lrwxrwxrwx	root/root	usr/lib/libEGL.so -> libEGL.so.1
+-rwxr-xr-x	root/root	usr/lib/libEGL.so.1
+lrwxrwxrwx	root/root	usr/lib/libGAL.so -> libGAL.so.1
+-rwxr-xr-x	root/root	usr/lib/libGAL.so.1
+lrwxrwxrwx	root/root	usr/lib/libGLES_CL.so -> libGLES_CL.so.1
+-rwxr-xr-x	root/root	usr/lib/libGLES_CL.so.1
+lrwxrwxrwx	root/root	usr/lib/libGLES_CM.so -> libGLES_CM.so.1
+-rwxr-xr-x	root/root	usr/lib/libGLES_CM.so.1
+lrwxrwxrwx	root/root	usr/lib/libGLESv2SC.so -> libGLESv2SC.so.1
+-rwxr-xr-x	root/root	usr/lib/libGLESv2SC.so.1
+lrwxrwxrwx	root/root	usr/lib/libGLESv2x.so -> libGLESv2x.so.1
+-rwxr-xr-x	root/root	usr/lib/libGLESv2x.so.1
+lrwxrwxrwx	root/root	usr/lib/libOpenVG.so -> libOpenVG.so.1
+-rwxr-xr-x	root/root	usr/lib/libOpenVG.so.1
+lrwxrwxrwx	root/root	usr/lib/libVIVANTE.so -> libVIVANTE.so.1
+-rwxr-xr-x	root/root	usr/lib/libVIVANTE.so.1
+lrwxrwxrwx	root/root	usr/lib/libgcu.so -> libgcu.so.1
+-rwxr-xr-x	root/root	usr/lib/libgcu.so.1
