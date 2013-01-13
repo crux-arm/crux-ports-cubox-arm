@@ -2,7 +2,7 @@
 # URL: http://www.solid-run.com/mw/index.php/Main_Page
 # Packager: Ryan Mullen, rmmullen at gmail dot com
 # Maintainer: Ryan Mullen, rmmullen at gmail dot com
-# Depends on: liboil
+# Depends on: liboil gst-plugins-base
 
 name=gst-plugins-bmmxv
 version=0.10.25
