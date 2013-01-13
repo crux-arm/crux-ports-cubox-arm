@@ -1,0 +1,13 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/rc.d/
+-rwxr-xr-x	root/root	etc/rc.d/vmeta
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+-rwxr-xr-x	root/root	usr/include/uio_vmeta.h
+-rwxr-xr-x	root/root	usr/include/vmeta_lib.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libcodecvmetadec.a
+-rw-r--r--	root/root	usr/lib/libcodecvmetadec.so.1
+-rwxr-xr-x	root/root	usr/lib/libvmeta.so
+-rw-r--r--	root/root	usr/lib/libvmetahal.a
+-rw-r--r--	root/root	usr/lib/libvmetahal.so
