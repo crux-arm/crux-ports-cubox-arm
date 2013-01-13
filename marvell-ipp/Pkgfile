@@ -13,9 +13,9 @@ build() {
 
     # Adapted from Arch ALARM marvell-ipp
 
-    cd packages/marvell-ipp
-    tar xf marvell-ipp_$version-0ubuntu1~ppa10.tar.gz
-    cd marvell-ipp
+    cd packages/$name
+    tar xf $name_$version-0ubuntu1~ppa10.tar.gz
+    cd $name
 
     sed -r \
         -e "s|^(PATH_GNU_BIN=).+|\1/usr/bin|" \
@@ -30,7 +30,7 @@ build() {
     cd example/misc/build/wmmx2_linux
     make -j1 -f makefile_miscGen
 
-    cd $SRC/packages/marvell-ipp/marvell-ipp
+    cd $SRC/packages/$name/$name
 
     mkdir -p $PKG/usr/lib
     mkdir $PKG/usr/include
@@ -38,8 +38,8 @@ build() {
 
     install -Dm644 etc/99-uio.rules \
         $PKG/etc/udev/rules.d/99-uio.rules
-    install -d $PKG/usr/lib $PKG/usr/include/marvell-ipp
-    install -m644 include/*.h $PKG/usr/include/marvell-ipp
+    install -d $PKG/usr/lib $PKG/usr/include/$name
+    install -m644 include/*.h $PKG/usr/include/$name
 
     find bin lib -not -type d \( -name "*.so" -o -name "*.a" \) \
         -not -path "*libcodecvmetadec.a" \
