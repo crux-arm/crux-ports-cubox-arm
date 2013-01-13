@@ -1,0 +1,32 @@
+# Description: Armada 510/Dove Block/buffer memory management for hardware accelerators
+# URL: http://www.solid-run.com/mw/index.php/Main_Page
+# Packager: Ryan Mullen, rmmullen at gmail dot com
+# Maintainer: Ryan Mullen, rmmullen at gmail dot com
+# Depends on:
+
+name=marvell-libbmm
+version=0.2.0
+release=1
+source=(http://download.solid-run.com/pub/solidrun/cubox/packages/cubox-packages-source/cubox-packages.tar.gz)
+
+build() {
+
+    # Adapted from Arch ALARM marvell-libbmm
+
+    cd packages/bmm-lib
+    tar xf marvell-libbmm_$version-0ubuntu1~ppa8.tar.gz
+    cd lib
+    
+    make -j1 -f Makefile_general
+
+    mkdir -p $PKG/usr/lib
+	mkdir $PKG/usr/include
+
+    install -Dm755 libbmm.so.0u.1 $PKG/usr/lib/libbmm.so.0u.1
+    install -Dm644 bmm_lib.h $PKG/usr/include/bmm_lib.h
+    install -Dm644 etc/udev/rules.d/99-bmm.rules \
+        $PKG/usr/lib/udev/rules.d/99-bmm.rules
+
+    ln -s /usr/lib/libbmm.so.0u.1 $PKG/usr/lib/libbmm.so.0u
+    ln -s /usr/lib/libbmm.so.0u.1 $PKG/usr/lib/libbmm.so
+}	
