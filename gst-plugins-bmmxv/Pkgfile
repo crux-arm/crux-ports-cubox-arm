@@ -5,15 +5,14 @@
 # Depends on: liboil
 
 name=gst-plugins-bmmxv
-version=0.10
-minor=.25
+version=0.10.25
 release=1
 source=(http://download.solid-run.com/pub/solidrun/cubox/packages/cubox-packages-source/cubox-packages.tar.gz)
 
 build() {
 
     cd packages/$name
-    tar xf $name${version}_$version$minor-0ubuntu1~ppa9.tar.gz
+    tar xf ${name}0.10_$version-0ubuntu1~ppa9.tar.gz
     cd $name
     ./configure --prefix=/usr --mandir=/usr/man
 
