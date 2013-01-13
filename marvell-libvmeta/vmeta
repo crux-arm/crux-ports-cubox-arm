@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# /etc/rc.d/vmeta: start/stop vmeta high speed clock
+#
+
+case $1 in
+start)
+    echo 667000000 > /sys/devices/platform/dove_clocks_sysfs.0/vmeta
+	;;
+stop)
+	echo 500000000 > /sys/devices/platform/dove_clocks_sysfs.0/vmeta
+	;;
+restart)
+	$0 stop
+	sleep 1
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file
