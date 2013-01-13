@@ -13,7 +13,7 @@ build() {
     # Adapted from Arch ALARM marvell-libbmm
 
     cd packages/bmm-lib
-    tar xf marvell-libbmm_$version-0ubuntu1~ppa8.tar.gz
+    tar xf $name_$version-0ubuntu1~ppa8.tar.gz
     cd lib
     
     make -j1 -f Makefile_general
