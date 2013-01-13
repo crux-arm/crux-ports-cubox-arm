@@ -1,0 +1,55 @@
+# Description: Armada 510/Dove Marvell IPP headers and CODECs
+# URL: http://www.solid-run.com/mw/index.php/Main_Page
+# Packager: Ryan Mullen, rmmullen at gmail dot com
+# Maintainer: Ryan Mullen, rmmullen at gmail dot com
+# Depends on: marvell-libvmeta
+
+name=marvell-ipp
+version=0.2.1
+release=1
+source=(http://download.solid-run.com/pub/solidrun/cubox/packages/cubox-packages-source/cubox-packages.tar.gz)
+
+build() {
+
+    # Adapted from Arch ALARM marvell-ipp
+
+    cd packages/marvell-ipp
+    tar xf marvell-ipp_$version-0ubuntu1~ppa10.tar.gz
+    cd marvell-ipp
+
+    sed -r \
+        -e "s|^(PATH_GNU_BIN=).+|\1/usr/bin|" \
+        -e "s|^(CFLAGS=).*|\1 -mcpu=cortex-a9|" \
+        -e "s|^(AR=).+|\1/usr/bin/ar|" \
+        -e "s|^(AS=).+|\1/usr/bin/as|" \
+        -e "s|^(CC=).+|\1/usr/bin/gcc|" \
+        -e "s|^(LN=).+|\1/usr/bin/ln|" \
+        -e "s|^(CXX=).+|\1/usr/bin/g++|" \
+        -i example/Rules.make
+
+    cd example/misc/build/wmmx2_linux
+    make -j1 -f makefile_miscGen
+
+    cd $SRC/packages/marvell-ipp/marvell-ipp
+
+    mkdir -p $PKG/usr/lib
+    mkdir $PKG/usr/include
+    mkdir -p $PKG/etc/udev/rules.d
+
+    install -Dm644 etc/99-uio.rules \
+        $PKG/etc/udev/rules.d/99-uio.rules
+    install -d $PKG/usr/lib $PKG/usr/include/marvell-ipp
+    install -m644 include/*.h $PKG/usr/include/marvell-ipp
+
+    find bin lib -not -type d \( -name "*.so" -o -name "*.a" \) \
+        -not -path "*libcodecvmetadec.a" \
+        -not -path "*libvmetahal.a" \
+        -not -path "*libvmetahal.so" \
+        -not -path "*libcodecvmetadec.so" \
+        -not -path "bin/libmiscgen.so" \
+        -exec install -m644 "{}"  $PKG/usr/lib/ \;
+
+    install -d $PKG/usr/include/OpenMAX/IL/
+    install -m644 openmax/include/* $PKG/usr/include/OpenMAX/IL/
+    install -m644 openmax/*.a $PKG/usr/lib/
+}	
