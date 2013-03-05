@@ -5,18 +5,17 @@
 # Depends on: xorg-server marvell-libgfx
 
 name=xorg-xf86-video-dove
-version=0.1.0
+version=0.3.4
 release=1
-source=(http://download.solid-run.com/pub/solidrun/cubox/packages/xserver-xorg-video-dove/xserver-xorg-video-dove-$version.tar.gz
+source=(http://archlinuxarm.org/builder/src/xf86-video-dove-$version.tar.gz
         dovefb-port-to-compat-api-for-new-server.patch
         xorg.conf)
 
 build() {
-    tar -xf xserver-xorg-video-dove-0.1.0/xserver-xorg-video-dove_0.3.4-1.tar.gz
-    cd xserver-xorg-video-dove-$version
-
+    cd xf86-video-dove-$version
+    
     patch -p1 -i $SRC/dovefb-port-to-compat-api-for-new-server.patch
-
+    sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac
     autoreconf -i
 
     CFLAGS="${CFLAGS} -I/usr/include/HAL -g -DMRVL_SUPPORT_RANDR=1 -DMRVL_SUPPORT_EXA=1 -DDUMP_RAW_VIDEO=0 -DMRVL_USE_OFFSCREEN_HEAP=0 -DMRVL_EXA_MODE=2 -DMRVL_EXA_ENABLE_UP_DOWNLOAD=2 -DMRVL_EXA_FORCE_HW_LOAD=0 -DMRVL_EXA_ALLOC_PIXMAP_FROM_SYSTEM=0 -DMRVL_EXA_PERF_PROFILING=0 -DMRVL_EXA_TRACE_FALLBACK=0 -DMRVL_EXA_XBGR_SUPPORT=1 -DMRVL_XV_SUPPORT_RGB_FORMAT=1 -DMRVL_XV_TEX_VIDEO=1 -DMRVL_XV_OVERLAY_VIDEO=1 -DMRVL_XV_DEFERRED_STALL_GPU=1 -DMRVL_XV_USE_FAKE_FENCE_STALL=1 -DMRVL_RANDR_EDID_MODES=1  -DMRVL_CRTC_SUPPORT_ROTATION=1 -DMRVL_PLATFORM_INFO=1"
