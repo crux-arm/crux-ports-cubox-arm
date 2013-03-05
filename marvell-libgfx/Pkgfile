@@ -16,8 +16,9 @@ build() {
 
     cd $PKG/usr/lib
 	for lib in EGL GAL GLES_CL GLES_CM GLESv2SC GLESv2x OpenVG VIVANTE gcu; do
-		cp $SRC/gc3184-1-mgcc462hd-d/lib$lib.so lib$lib.so.1
-		ln -s lib$lib.so.1 lib$lib.so
+		cp $SRC/gc3184-1-mgcc462hd-d/lib$lib.so lib$lib.so.1.0
+		ln -s lib$lib.so.1.0 lib$lib.so
+		ln -s lib$lib.so.1.0 lib$lib.so.1
 	done
 
 	cd $SRC/gc3184-gcc-4.6-armv7-hard_release/sdk/include

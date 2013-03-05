@@ -45,21 +45,30 @@ drwxr-xr-x	root/root	usr/include/VG/
 -rwxr--r--	root/root	usr/include/VG/vgu.h
 -rwxr--r--	root/root	usr/include/VG/vgunname.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libEGL.so -> libEGL.so.1
--rwxr-xr-x	root/root	usr/lib/libEGL.so.1
-lrwxrwxrwx	root/root	usr/lib/libGAL.so -> libGAL.so.1
--rwxr-xr-x	root/root	usr/lib/libGAL.so.1
-lrwxrwxrwx	root/root	usr/lib/libGLES_CL.so -> libGLES_CL.so.1
--rwxr-xr-x	root/root	usr/lib/libGLES_CL.so.1
-lrwxrwxrwx	root/root	usr/lib/libGLES_CM.so -> libGLES_CM.so.1
--rwxr-xr-x	root/root	usr/lib/libGLES_CM.so.1
-lrwxrwxrwx	root/root	usr/lib/libGLESv2SC.so -> libGLESv2SC.so.1
--rwxr-xr-x	root/root	usr/lib/libGLESv2SC.so.1
-lrwxrwxrwx	root/root	usr/lib/libGLESv2x.so -> libGLESv2x.so.1
--rwxr-xr-x	root/root	usr/lib/libGLESv2x.so.1
-lrwxrwxrwx	root/root	usr/lib/libOpenVG.so -> libOpenVG.so.1
--rwxr-xr-x	root/root	usr/lib/libOpenVG.so.1
-lrwxrwxrwx	root/root	usr/lib/libVIVANTE.so -> libVIVANTE.so.1
--rwxr-xr-x	root/root	usr/lib/libVIVANTE.so.1
-lrwxrwxrwx	root/root	usr/lib/libgcu.so -> libgcu.so.1
--rwxr-xr-x	root/root	usr/lib/libgcu.so.1
+lrwxrwxrwx	root/root	usr/lib/libEGL.so -> libEGL.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libEGL.so.1 -> libEGL.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libEGL.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGAL.so -> libGAL.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGAL.so.1 -> libGAL.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libGAL.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLES_CL.so -> libGLES_CL.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLES_CL.so.1 -> libGLES_CL.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libGLES_CL.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLES_CM.so -> libGLES_CM.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLES_CM.so.1 -> libGLES_CM.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libGLES_CM.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLESv2SC.so -> libGLESv2SC.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLESv2SC.so.1 -> libGLESv2SC.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libGLESv2SC.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLESv2x.so -> libGLESv2x.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libGLESv2x.so.1 -> libGLESv2x.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libGLESv2x.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libOpenVG.so -> libOpenVG.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libOpenVG.so.1 -> libOpenVG.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libOpenVG.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libVIVANTE.so -> libVIVANTE.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libVIVANTE.so.1 -> libVIVANTE.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libVIVANTE.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libgcu.so -> libgcu.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libgcu.so.1 -> libgcu.so.1.0
+-rwxr-xr-x	root/root	usr/lib/libgcu.so.1.0
